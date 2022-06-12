@@ -1,7 +1,7 @@
-import { Default as Thing } from './index.stories';
+import { Basic as Widget } from './index.stories';
 import { render, screen } from '@testing-library/react';
 
 test('renders without crashing', () => {
-  render(<Thing />);
-  screen.getByText('the snozzberries taste like snozzberries');
+  render(<Widget />);
+  screen.getByRole('button', { name: /open chat/i });
 });

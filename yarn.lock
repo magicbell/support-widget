@@ -4279,10 +4279,10 @@ boolbase@^1.0.0:
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-botz@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/botz/-/botz-1.1.0.tgz#68bf8fc9f134388db022acb0ac08370ac42f25c6"
-  integrity sha512-myVez5rQV6U201zi8u42W68TzC7vQZQ30XMP5WPvdiskCOYbZdDrpDbNbEf9LfEFYA6NsC/7jjreaedr6NiyRQ==
+botz@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/botz/-/botz-1.2.0.tgz#2e0ad8388995647e385925636a3050426f055c66"
+  integrity sha512-t8e8RirkI9aRuoQc/yYM6VIu0xdNJRlChNoXPmrqVXAA04sTn10i+q8G9h5x2j5/T1SB5DYLnwR97N4HSbOSbA==
 
 boxen@^5.1.2:
   version "5.1.2"

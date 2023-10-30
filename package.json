@@ -1,6 +1,6 @@
 {
   "name": "@magicbell/support-widget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Stephan Meijer",
   "main": "dist/index.js",
@@ -20,8 +20,7 @@
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "start-storybook -p 6006",
-    "test": "dts test --passWithNoTests",
-    "postinstall": "husky install"
+    "test": "dts test --passWithNoTests"
   },
   "prettier": {
     "printWidth": 80,

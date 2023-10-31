@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Stephan Meijer",
   "main": "dist/index.js",
-  "module": "dist/botz.esm.js",
+  "module": "dist/support-widget.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",

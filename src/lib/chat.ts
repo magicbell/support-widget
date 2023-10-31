@@ -10,8 +10,16 @@ export const chat: ChatFn = async (bot) => {
   };
 
   await bot.say(
-    'Hi! Thanks for reaching out. Before we get started, can you please tell me your name?'
+    'Hi there! I can help you with your support request. Did you know that we have [public Discussions](https://github.com/orgs/magicbell-io/discussions)? You might be able to find your answer there.',
+    { delay: 500 }
   );
+
+  await bot.say(
+    'Alternatively, I can create a support ticket for you. Please answer the following questions to do so.',
+    { delay: 5_000 }
+  );
+
+  await bot.say('Can you please tell me your name?', { delay: 3_000 });
 
   data.name = await bot.ask('Please enter your name…', {
     validate: async (value) => value.trim().length > 0,
@@ -48,6 +56,8 @@ export const chat: ChatFn = async (bot) => {
   } else if (error) {
     await bot.say(`Sorry, something went wrong!`);
     await bot.alert(error);
+  } else if (!ticket?.id) {
+    await bot.say(`Sorry, something went wrong!`);
   } else {
     await bot.say(
       `Done! Your ticket number is #${ticket.id}. Our human staff will contact you soon. Thanks again!`

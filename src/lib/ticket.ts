@@ -1,3 +1,5 @@
+const SUPPORTBEE_URL = 'https://magicbell.supportbee.com';
+
 export type TicketInput = {
   name: string;
   email: string;
@@ -11,7 +13,7 @@ export async function createTicket({
   message,
   subject,
 }: TicketInput) {
-  const response = await fetch(`https://magicbell.supportbee.com/tickets`, {
+  const response = await fetch(`${SUPPORTBEE_URL}/tickets`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -27,6 +29,36 @@ export async function createTicket({
       },
     }),
   });
+
+  if (!response.ok) {
+    return { error: response.statusText };
+  }
+
+  return response.json();
+}
+
+export type ReplyInput = {
+  ticketId: string;
+  message: string;
+};
+
+export async function createReply({ ticketId, message }: ReplyInput) {
+  const response = await fetch(
+    `${SUPPORTBEE_URL}/tickets/${ticketId}/replies`,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        reply: {
+          content: {
+            text: message,
+          },
+        },
+      }),
+    }
+  );
 
   if (!response.ok) {
     return { error: response.statusText };

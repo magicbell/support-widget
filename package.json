@@ -1,6 +1,6 @@
 {
   "name": "@magicbell/support-widget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Stephan Meijer",
   "main": "dist/index.js",

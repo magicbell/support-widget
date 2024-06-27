@@ -20,7 +20,8 @@
     "size": "size-limit",
     "start": "dts watch",
     "storybook": "start-storybook -p 6006",
-    "test": "dts test --passWithNoTests"
+    "test": "dts test --passWithNoTests",
+    "prepare": "dts build"
   },
   "prettier": {
     "printWidth": 80,

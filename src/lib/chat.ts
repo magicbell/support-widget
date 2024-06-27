@@ -10,7 +10,7 @@ export const chat: ChatFn = async (bot) => {
   };
 
   await bot.say(
-    'Hi there! I can help you with your support request. Did you know that we have [public Discussions](https://github.com/orgs/magicbell-io/discussions)? You might be able to find your answer there.',
+    'Hi there! I can help you with your support request. Did you know that we have [public Discussions](https://magicbell.to/community)? You might be able to find your answer there.',
     { delay: 500 }
   );
 
